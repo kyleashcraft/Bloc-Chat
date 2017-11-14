@@ -1,7 +1,7 @@
 <h1>Home Page</h1>
-<body ng-repeat="room in home.rooms track by $index">
+<h2>Rooms</h2>
+<section ng-repeat="room in home.rooms track by $index">
   <ul>
-    <li>{{room.value}}</li>
-    <li>{{1+1}}</li>
+    <li>{{ room.snapshot.val().name }}</li>
   </ul>
-</body>
+</section>
