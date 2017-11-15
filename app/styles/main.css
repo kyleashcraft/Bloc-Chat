@@ -1,6 +1,50 @@
 body {
-  padding: 1rem;
+  font-family: arial;
+  background-color: rgb(234, 255, 250);
+}
+
+.navbar {
+  background-color: rgb(242, 242, 242);
+  width: 200px;
+  height: 98.5%;
+  margin: 5px 5px 5px 5px;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  text-align: center;
+  box-shadow: 3px 3px 1px 0 rgb(210, 210, 210);
+}
+
+.navbar h1 {
+  font-style: italic;
+  background-color: rgb(163, 198, 255);
+}
+.navbar h2 {
+  background-color: rgb(163, 198, 255);
+}
+.addroom {
+  margin-top: 0;
+}
+.addroom:hover {
+  background-color: rgb(163, 198, 255);
+  cursor: pointer;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+
+.navbar li {
+    cursor: pointer;
+}
+
+li:hover {
+  background-color: rgb(180, 210, 255);
+}
+
+.popup {
   position: relative;
-  left: 20px;
-  top: 20px;
+  left: 250px;
 }

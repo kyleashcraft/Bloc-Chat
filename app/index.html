@@ -6,7 +6,10 @@
     <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body>
+  <div class="navbar">
+    <h1>Bloc Chat</h1>
     <ui-view></ui-view>
+  </div>
 
     <!-- Angular -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
@@ -19,6 +22,9 @@
 
     <!-- AngularFire -->
     <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+
+    <!-- AngularUI Bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
 
     <script>
       // Initialize Firebase
@@ -37,5 +43,6 @@
     <script src="/scripts/app.js"></script>
     <script src="/scripts/controllers/HomeCtrl.js"></script>
     <script src="/scripts/services/Room.js"></script>
+    <script src="/scripts/controllers/ModalCtrl.js"></script>
 </body>
 </html>
