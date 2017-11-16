@@ -1,7 +1,8 @@
-<h1>Home Page</h1>
 <h2>Rooms</h2>
 <section ng-repeat="room in home.rooms.all track by $index">
-  <ul>
-    <li>{{ room.$id + " - " + room.$value + home.log(room) }}</li>
+  <ul class="navbar">
+    <li>{{ room.$value }}</li>
   </ul>
 </section>
+
+<h4 class="addroom" ng-controller="ModalCtrl as modal" ng-click="modal.open()">+</h4>
