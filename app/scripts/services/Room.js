@@ -10,9 +10,15 @@
       console.log(room);
     }
 
-    Room.add = function(room) {
-      var newRoom = rooms.$add({ room });
-      console.log('Room.js value: ' + newRoom);
+    Room.add = function(newRoom) { //accepts room object
+      newRoom.$id = rooms.length; //gives newRoom.$id an index value (previously null)
+      console.log('Room.js - new room object value: ') //log for clarity
+      console.log(newRoom); //print final newRoom variable to be added
+      rooms.$add(newRoom).then(function(ref){ //add newRoom
+        console.log("New object added successfully: " + ref); //success message
+      }, function(ref){
+        console.log("failed to add new value: " + ref); //failure message
+      });
     }
 
     return Room;

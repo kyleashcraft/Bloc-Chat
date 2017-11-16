@@ -1,7 +1,7 @@
 (function(){
   function HomeCtrl($uibModal, Room) {
-
     this.rooms = Room;
+    this.newRoom = null;
 
     this.openPopUp = function() {
       $uibModal.open({
@@ -10,6 +10,7 @@
         controllerAs: 'ctrl'
       });
     }
+
 
 
   }
