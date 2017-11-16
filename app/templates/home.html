@@ -1,6 +1,6 @@
 <h2>Rooms</h2>
 <ul>
-  <li ng-repeat="room in home.rooms.all track by $index">{{ room.$value }}</li>
+  <li ng-repeat="room in home.rooms.all track by $index">{{ room.$value + home.log(room) }}</li>
 </ul>
 
 <h4 class="addroom" ng-click="home.openPopUp()">+</h4>

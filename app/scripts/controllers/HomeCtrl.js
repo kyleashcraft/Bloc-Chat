@@ -1,7 +1,10 @@
 (function(){
   function HomeCtrl($uibModal, Room) {
     this.rooms = Room;
-    this.newRoom = null;
+
+    this.log = function(thing) {
+      console.log(thing);
+    }
 
     this.openPopUp = function() {
       $uibModal.open({
