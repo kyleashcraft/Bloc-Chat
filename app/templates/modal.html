@@ -1,4 +1,8 @@
 <div class="popup" ng-app="blocChat">
-    <h2> Add a new room </h2>
-    <h2 ng-click="ctrl.cancel()">Cancel</h2>
+  <form ng-submit="ctrl.add()">
+    Name: <input type="text" ng-model="ctrl.roomName" id="textbox"> <br>
+    <input type="submit" value="Add a new room">
+  </form> <form ng-submit="ctrl.cancel()">
+    <input type="submit" value="cancel">
+  </form>
 </div>

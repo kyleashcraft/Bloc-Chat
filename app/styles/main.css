@@ -47,4 +47,9 @@ li:hover {
 .popup {
   position: relative;
   left: 250px;
+  width: 400px;
+  padding: 10px 0px 10px 0px;
+  background-color: rgb(242, 242, 242);
+  box-shadow: 3px 3px 1px 0 rgb(210, 210, 210);
+  text-align: center;
 }

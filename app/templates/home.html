@@ -3,4 +3,4 @@
   <li ng-repeat="room in home.rooms.all track by $index">{{ room.$value }}</li>
 </ul>
 
-<h4 class="addroom" ng-controller="ModalCtrl as modal" ng-click="modal.open()">+</h4>
+<h4 class="addroom" ng-click="home.openPopUp()">+</h4>

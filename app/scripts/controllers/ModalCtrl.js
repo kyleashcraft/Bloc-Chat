@@ -1,22 +1,30 @@
 (function(){
-  function ModalCtrl($uibModal){
-    this.open = function() {
+  function ModalCtrl($uibModalInstance){
 
-      console.log('opening pop up');
+    this.cancel = function() {
+      console.log("cancel");
+      $uibModalInstance.dismiss('cancel');
+    };
 
-      $uibModal.open({
-        templateUrl: '../../templates/modal.html',
-        controller: function() {
-          this.cancel = function() {
-            console.log("cancel");
-            //$uibModal.dismiss();
-          }
-        },
-        controllerAs: 'ctrl'
-      });
-    }
+    this.add = function() {
+      console.log("add clicked");
+      var doc = angular.element(document.getElementById('textbox') );
+      var val = doc.val();
+      if (val) {
+        $uibModalInstance.close(val);
+      }
+    };
+
+    $uibModalInstance.result.then(function(result){
+      console.log("Add room clicked, result: " + result);
+      return result;
+    }, function(result){
+      console.log("Cancel clicked, result: " + result);
+      return result;
+    });
+
   };
   angular
     .module('blocChat')
-    .controller('ModalCtrl', ['$uibModal', ModalCtrl]);
+    .controller('ModalCtrl', ['$uibModalInstance', ModalCtrl]);
 })();

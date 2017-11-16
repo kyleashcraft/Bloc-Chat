@@ -6,8 +6,13 @@
 
     Room.all = rooms;
 
+    Room.log = function(room) {
+      console.log(room);
+    }
+
     Room.add = function(room) {
-      rooms.$add({ name: value });
+      var newRoom = rooms.$add({ room });
+      console.log('Room.js value: ' + newRoom);
     }
 
     return Room;
