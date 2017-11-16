@@ -1,7 +1,7 @@
 {
-  "name" : "bloc-frontend-project-starter",
+  "name" : "bloc-Chat",
   "version" : "0.0.4",
-  "description" : "Starter project for the Bloc Frontend Web Development",
+  "description" : "Chat app using Angular, Firebase, Bootstrap",
   "repository" : {
     "type" : "git",
     "url" : "https://github.com/bloc/bloc-frontend-project-starter"
