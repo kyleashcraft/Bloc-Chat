@@ -4,8 +4,8 @@ body {
 }
 
 .navbar {
-  background-color: rgb(242, 242, 242);
-  width: 200px;
+  background-color: rgb(230, 230, 230);
+  width: 15%;
   height: 98.5%;
   margin: 5px 5px 5px 5px;
   position: fixed;
@@ -46,12 +46,14 @@ li:hover {
 
 .popup {
   position: relative;
-  left: 250px;
+  left: 50%;
+  top: 50%;
   width: 400px;
   padding: 10px 0px 10px 0px;
   background-color: rgb(242, 242, 242);
   box-shadow: 3px 3px 1px 0 rgb(210, 210, 210);
   text-align: center;
+  z-index: 2;
 }
 
 form {
@@ -60,4 +62,17 @@ form {
 
 input[type=submit] {
   margin: 5px;
+}
+
+#roomDiv {
+  position: fixed;
+  display: inline;
+  left: 15%;
+  top: 0px;
+  height: 98%;
+  width: 82%;
+  margin: 12px;
+  background-color: rgb(230, 230, 230);
+  box-shadow: 3px 3px 1px 0 rgb(210, 210, 210);
+  z-index: 1;
 }
