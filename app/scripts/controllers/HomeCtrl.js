@@ -7,10 +7,20 @@
     }
 
     this.openPopUp = function() {
-      $uibModal.open({
+      var modal = $uibModal.open({
         templateUrl: '/templates/modal.html',
         controller: 'ModalCtrl',
         controllerAs: 'ctrl'
+      });
+      modal.result.then(function(val){
+        var newRoom = {
+          $id: null,
+          $priority: null,
+          $value: val
+        };
+        Room.add(newRoom);
+      }, function(val){
+        alert("Failed to add new room: " + val);
       });
     }
 

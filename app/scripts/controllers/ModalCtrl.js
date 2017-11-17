@@ -1,5 +1,5 @@
 (function(){
-  function ModalCtrl($uibModalInstance, Room){
+  function ModalCtrl($uibModalInstance){
 
     this.cancel = function() {
       console.log("cancel");
@@ -14,20 +14,8 @@
       }
     };
 
-    this.modalClose = $uibModalInstance.result.then(
-      function(result){ //successful promise eval
-        var newRoom = {
-          $id: null,
-          $priority: null,
-          $value: result
-      };
-        Room.add(newRoom);
-      }, function(result){ //failure promise eval
-        return result;
-      });
-
   };
   angular
     .module('blocChat')
-    .controller('ModalCtrl', ['$uibModalInstance', 'Room', ModalCtrl]);
+    .controller('ModalCtrl', ['$uibModalInstance', ModalCtrl]);
 })();
