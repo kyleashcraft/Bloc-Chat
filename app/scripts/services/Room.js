@@ -12,9 +12,7 @@
 
     Room.add = function(newRoom) { //accepts room object
       rooms.$add(newRoom).then(function(ref){ //add newRoom
-      }, function(ref){
-        alert("failed to add new value: " + ref); //failure message
-      });
+      }); //no failure message
     }
 
     return Room;

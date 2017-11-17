@@ -2,7 +2,6 @@
   function ModalCtrl($uibModalInstance){
 
     this.cancel = function() {
-      console.log("cancel");
       $uibModalInstance.dismiss('cancel');
     };
 

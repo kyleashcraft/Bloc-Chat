@@ -20,7 +20,7 @@
         };
         Room.add(newRoom);
       }, function(val){
-        alert("Failed to add new room: " + val);
+        return val;
       });
     }
 
