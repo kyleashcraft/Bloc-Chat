@@ -53,3 +53,11 @@ li:hover {
   box-shadow: 3px 3px 1px 0 rgb(210, 210, 210);
   text-align: center;
 }
+
+form {
+  display: inline;
+}
+
+input[type=submit] {
+  margin: 5px;
+}
