@@ -1,6 +1,10 @@
 <h2>Rooms</h2>
 <ul>
-  <li ng-repeat="room in home.rooms.all track by $index">{{ room.$value }}</li>
+  <li ng-repeat="room in home.rooms.all track by $index" ng-click="home.openRoom(room.$id)">{{ room.$value }}</li>
 </ul>
 
 <h4 class="addroom" ng-click="home.openPopUp()">+</h4>
+
+<div id="roomDiv">
+  <li ng-repeat="message in home.roomMessages"> Author: {{message.username}} - {{message.content}} - {{message.sentAt}}</li>
+</div>

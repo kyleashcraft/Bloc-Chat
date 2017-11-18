@@ -16,7 +16,7 @@
     }
 
     return Room;
-  }
+  };
 
   angular
     .module('blocChat')

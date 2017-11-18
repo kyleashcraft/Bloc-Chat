@@ -75,4 +75,5 @@ input[type=submit] {
   background-color: rgb(230, 230, 230);
   box-shadow: 3px 3px 1px 0 rgb(210, 210, 210);
   z-index: 1;
+  padding: 10px;
 }
