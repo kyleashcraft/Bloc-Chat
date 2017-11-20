@@ -10,7 +10,6 @@
     if (!currentUser || currentUser === '') {
       var modal = $uibModal.open({
         keyboard: false,
-        backdropClass: 'newUser',
         templateUrl: '/templates/username.html',
         controller: 'ModalCtrl',
         controllerAs: 'ctrl'
