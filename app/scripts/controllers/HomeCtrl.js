@@ -8,10 +8,11 @@
 
     this.roomId = null;
 
+    this.user = $cookies.get('blocChatCurrentUser');
+
     this.currentUser = function() {
-      var user =$cookies.get('blocChatCurrentUser');
-      if (user) {
-        return 'Welcome, ' + user;
+      if (this.user) {
+        return 'Welcome, ' + this.user;
       }
     }
 
@@ -39,6 +40,7 @@
 
     this.openRoom = function (roomId) {
         this.roomMessages = Message.getByRoomId(roomId);
+        this.roomId = roomId;
     }
 
 

@@ -5,7 +5,7 @@ body {
 
 .navbar {
   background-color: rgb(230, 230, 230);
-  width: 15%;
+  width: 180px;
   height: 98.5%;
   margin: 5px 5px 5px 5px;
   position: fixed;
@@ -30,6 +30,10 @@ body {
   cursor: pointer;
 }
 
+li:hover{
+  cursor: auto;
+}
+
 .navbar ul {
   list-style-type: none;
   margin: 0;
@@ -40,7 +44,7 @@ body {
     cursor: pointer;
 }
 
-li:hover {
+.navbar li:hover {
   background-color: rgb(180, 210, 255);
 }
 
@@ -67,13 +71,53 @@ input[type=submit] {
 #roomDiv {
   position: fixed;
   display: inline;
-  left: 15%;
+  left: 185px;
   top: 0px;
   height: 98%;
-  width: 82%;
+  width: 80vw;
   margin: 12px;
   background-color: rgb(230, 230, 230);
   box-shadow: 3px 3px 1px 0 rgb(210, 210, 210);
   z-index: 1;
   padding: 10px;
+  text-align: left;
+}
+
+#messagesDiv {
+  border: 1px solid black;
+  margin: 10px;
+  height: 90%;
+}
+
+.messages {
+  list-style-type: none;
+}
+
+.username {
+  position: relative;
+  left: 0px;
+  background-color: rgb(180, 210, 255);
+  padding: 0 5px 0 5px;
+}
+
+.content {
+  position: relative;
+}
+
+.time {
+  font-style: italic;
+  font-weight: bold;
+}
+
+#messages {
+  margin: 10px;
+  text-align: center;
+}
+
+#messages li {
+  border-bottom: 1px solid black;
+}
+
+#message {
+  width: 80%;
 }

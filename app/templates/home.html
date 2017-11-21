@@ -6,7 +6,19 @@
 <h4 class="addroom" ng-click="home.openPopUp()">+</h4>
 
 <div id="roomDiv">
-  <li ng-repeat="message in home.roomMessages"> Author: {{message.username}} - {{message.content}} - {{message.sentAt}}</li>
+  <div id="messagesDiv">
+    <ul>
+    <li ng-repeat="message in home.roomMessages" class="messages">
+      <span class="username"> {{message.username}} </span>
+      <span class="content"> {{message.content}} </span>
+      <span class="time"> {{message.sentAt}} </span>
+    </li>
+  </ul>
+  </div>
+  <form ng-submit="home.Message.send(home.roomId, home.user)" ng-show="home.roomId" id="messages">
+    <input type="text" id="message">
+    <input type="submit">
+  </form>
 </div>
 
 <em> {{ home.currentUser() }} </em>
