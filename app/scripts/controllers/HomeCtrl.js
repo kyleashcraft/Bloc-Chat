@@ -8,7 +8,12 @@
 
     this.roomId = null;
 
-    this.currentUser = $cookies.get('blocChatCurrentUser');
+    this.currentUser = function() {
+      var user =$cookies.get('blocChatCurrentUser');
+      if (user) {
+        return 'Welcome, ' + user;
+      }
+    }
 
     this.log = function(thing) {
       console.log(thing);
@@ -18,7 +23,7 @@
       var modal = $uibModal.open({
         templateUrl: '/templates/modal.html',
         controller: 'ModalCtrl',
-        controllerAs: 'ctrl'
+        controllerAs: '$ctrl'
       });
       modal.result.then(function(val){
         var newRoom = {

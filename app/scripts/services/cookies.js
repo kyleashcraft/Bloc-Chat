@@ -1,7 +1,5 @@
 (function(){
-  function BlocChatCookies($cookies, $uibModal, $rootScope){
-
-    var BlocChatCookies = {};
+  function BlocChatCookies($cookies, $uibModal){
 
     this.currentUsername = null;
 
@@ -12,20 +10,17 @@
         keyboard: false,
         templateUrl: '/templates/username.html',
         controller: 'ModalCtrl',
-        controllerAs: 'ctrl'
+        controllerAs: '$ctrl'
       });
       modal.result.then(function(val){
         $cookies.put('blocChatCurrentUser', val);
         console.log("Welcome, " + val);
       });
-    } else {
-      console.log("Welcome back, " + currentUser);
     }
-    return BlocChatCookies;
   }
 
   angular
     .module('blocChat')
-    .run(['$cookies', '$uibModal', '$rootScope', BlocChatCookies]);
+    .run(['$cookies', '$uibModal', BlocChatCookies]);
 
 })();
