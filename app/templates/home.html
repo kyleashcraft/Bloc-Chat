@@ -5,7 +5,7 @@
 
 <h4 class="addroom" ng-click="home.openPopUp()">+</h4>
 
-<div id="roomDiv">
+<div id="roomDiv" ng-show="home.roomId">
   <div id="messagesDiv">
     <ul>
     <li ng-repeat="message in home.roomMessages" class="messages">
@@ -15,7 +15,7 @@
     </li>
   </ul>
   </div>
-  <form ng-submit="home.Message.send(home.roomId, home.user)" ng-show="home.roomId" id="messages">
+  <form ng-submit="home.Message.send(home.roomId, home.user)" id="messages">
     <input type="text" id="message">
     <input type="submit">
   </form>
